@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning des Travaux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Planning des Travaux</h1>
+        <div id="login-container">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Mot de passe">
+            <button id="login">Se connecter</button>
+        </div>
+        <div id="form-container" style="display:none;">
+            <form id="work-form">
+                <input type="text" id="company" placeholder="Entreprise">
+                <input type="text" id="commune" placeholder="Commune">
+                <input type="date" id="start-date">
+                <input type="date" id="end-date">
+                <input type="text" id="work-type" placeholder="Type de travaux">
+                <input type="text" id="site-manager" placeholder="Nom du chef de chantier">
+                <input type="text" id="box-number" placeholder="N° de coffret de commande">
+                <button type="submit">Soumettre</button>
+            </form>
+            <div id="calendar"></div>
+            <div id="map"></div>
+        </div>
+        <div id="admin-container" style="display:none;">
+            <h2>Créer un utilisateur</h2>
+            <form id="create-user-form">
+                <input type="email" id="new-email" placeholder="Email">
+                <input type="password" id="new-password" placeholder="Mot de passe">
+                <button type="submit">Créer utilisateur</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
